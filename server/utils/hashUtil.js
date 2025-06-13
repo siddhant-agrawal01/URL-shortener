@@ -1,4 +1,3 @@
-// utils/hashUtil.js
 const crypto = require('crypto');
 
 module.exports = (input) => {

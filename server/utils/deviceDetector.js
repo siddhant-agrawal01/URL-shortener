@@ -1,4 +1,3 @@
-// utils/deviceDetector.js
 const useragent = require('useragent');
 
 module.exports = (ua) => {
