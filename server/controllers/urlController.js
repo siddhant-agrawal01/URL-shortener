@@ -142,6 +142,17 @@ const getAnalytics = async (req, res) => {
       topReferrers,
       timeSeries,
       tags: url.tags,
+
+
+  deviceType: deviceCount, // ✅ rename
+  referrers: referrerCount, // ✅ rename timeSeries: Object.entries(timeSeries).map(([time, count]) => ({ time, count })),
+
+  topReferrers, // optional if used separately
+
+  timeSeries: Object.entries(timeSeries).map(([time, count]) => ({ time, count })),
+
+  topReferrers, 
+
     });
   } catch (error) {
     res.status(500).json({ message: 'Error fetching analytics' });
